@@ -1,4 +1,4 @@
-import { combineReducers } fromo 'redux'
+import { combineReducers } from 'redux'
 
 import { eventsReducer } from './eventsReducer'
 import { sectionsReducer } from './sectionsReducer'

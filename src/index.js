@@ -1,13 +1,14 @@
 // react-redux, redux, thunk
 
+import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
-import ReactDom from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import App from './components/App'
+import { rootReducer } from './reducers/rootReducer'
 
 const store = createStore(
     rootReducer,
@@ -17,6 +18,6 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <App />
-    </Provider>
+    </Provider>,
     document.getElementById('root')
 )
