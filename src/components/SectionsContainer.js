@@ -1,8 +1,6 @@
-// houses data and methods.
-
 import React, { Component } from 'react'
 
-export class EventsContainer extends Component {
+export class SectionsContainer extends Component {
     render() {
         return (
             <div>
@@ -12,4 +10,4 @@ export class EventsContainer extends Component {
     }
 }
 
-export default EventsContainer
+export default SectionsContainer
