@@ -18,7 +18,7 @@ export class EventsContainer extends Component {
         return (
             <div>
                 
-                <EventsForm />
+                
             </div>
         )
     }
