@@ -1,13 +1,15 @@
 import React from 'react';
 
+import Router from './Router'
 import EventsContainer from './EventsContainer'
-import SectionsContainer from './SectionsContainer'
 
 const App = () => {
     return (
         <div>
+            
             <EventsContainer />
-            <SectionsContainer />
+            <Router />
+
         </div>
     );
 };

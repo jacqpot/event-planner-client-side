@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import { fetchEvents } from '../actions/eventsActions'
 import EventsForm from './EventsForm'
+import EventsList from './EventsList'
 
 
 export class EventsContainer extends Component {
@@ -16,6 +17,7 @@ export class EventsContainer extends Component {
     render() {
         return (
             <div>
+                
                 <EventsForm />
             </div>
         )

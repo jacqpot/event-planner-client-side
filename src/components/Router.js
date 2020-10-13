@@ -3,15 +3,15 @@ import { Switch, Route } from 'react-router-dom'
 
 import Home from '../components/Home'
 import About from '../components/About'
-import EventsContainer from './EventsContainer'
-import EventIndex from '../components/EventIndex'
+import EventsList from './EventsList'
+
 
 const Router = () => {
     
         return (
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/events' component={EventIndex} />
+                <Route path='/events' component={EventsList} />
                 <Route path='/about' component={About} />
             </Switch>
         )
