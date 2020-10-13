@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import DatePicker from './DatePicker'
 import { addEvent } from '../actions/eventsActions'
 class EventsForm extends Component {
 
@@ -28,8 +28,8 @@ class EventsForm extends Component {
     render() {
         return (
          <form onSubmit={this.handleSubmit}>
-             <h3>New Event Form:</h3>
-             Enter all dates in military time
+             <h3>New Event Form</h3>
+             
              <br/>
              <label>Title:</label>
              <input type="text" value={this.state.title} onChange={this.handleChange} name='title'/>
@@ -38,13 +38,13 @@ class EventsForm extends Component {
              <input type="text" value={this.state.description} onChange={this.handleChange} name='description'/>
              <br/>
              <label>Date:</label>
-             <input type="text" value={this.state.date} onChange={this.handleChange} name='date'/>
+             <input type="date" value={this.state.date} onChange={this.handleChange} name='date'/>
              <br/>
              <label>Start time:</label>
-             <input type="text" value={this.state.start} onChange={this.handleChange} name='start'/>
+             <input type="time" value={this.state.start} onChange={this.handleChange} name='start'/>
              <br/>
              <label>finish time:</label>
-             <input type="text" value={this.state.finish} onChange={this.handleChange} name='finish'/>
+             <input type="time" value={this.state.finish} onChange={this.handleChange} name='finish'/>
                 <br/>
             <input type="submit" value="Create Event" />
          </form>
