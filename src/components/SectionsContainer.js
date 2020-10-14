@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { fetchSections } from "../actions/sectionsActions";
+import SectionForm from "./SectionForm";
 
 export class SectionsContainer extends Component {
   componentDidMount() {
@@ -9,7 +10,11 @@ export class SectionsContainer extends Component {
   }
 
   render() {
-    return <div>Sections Container</div>;
+    return (
+      <div>
+        <SectionForm />
+      </div>
+    );
   }
 }
 
