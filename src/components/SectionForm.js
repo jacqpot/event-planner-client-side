@@ -19,7 +19,7 @@ class SectionForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addEvent(this.state);
+    this.props.addSection(this.state);
   };
 
   render() {

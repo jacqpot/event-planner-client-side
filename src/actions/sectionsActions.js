@@ -5,3 +5,15 @@ export const fetchSections = () => {
       .then((parts) => dispatch({ type: "FETCH_SECTIONS", payload: parts }));
   };
 };
+
+export const addSection = (section) => {
+  return (dispatch) => {
+    fetch("http://localhost:3001/sections", {
+      method: "POST",
+      body: JSON.stringify(section),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((resp) => resp.json())
+      .then((section) => dispatch({ type: "ADD_SECTION", payload: section }));
+  };
+};
