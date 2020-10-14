@@ -1,16 +1,21 @@
-import React from 'react'
-import { connect } from 'react-redux'
-
+import React from "react";
+import { connect } from "react-redux";
+import Event from "./Event";
 const EventsList = ({ events }) => {
-        return (
-            <div>
-                {events.map(ev => <ul> <li key={ev.id}>{ev.title} - {ev.description} - {ev.date} - {ev.start} - {ev.finish}</li> </ul> )}
-            </div>
-        )
-}
+  const sortedEvents = events
+    .sort((a, b) => new Date(b.set_date) - new Date(a.set_date))
+    .reverse();
+  const even = sortedEvents.map((ev, i) => <Event key={i} even={ev} />);
+  return (
+    <div>
+      <h3>Events</h3>
+      <ul>{even}</ul>
+    </div>
+  );
+};
 
-const mapStateToProps = state => {
-    return { events: state.events}
-}
+const mapStateToProps = (state) => {
+  return { events: state.events };
+};
 
 export default connect(mapStateToProps)(EventsList);
