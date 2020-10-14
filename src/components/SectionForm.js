@@ -5,8 +5,21 @@ class SectionForm extends Component {
     title: "",
     description: "",
     startTime: "",
-    duration: null,
-    event_id: null,
+    duration: "",
+    event_id: "",
+  };
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.addEvent(this.state);
   };
 
   render() {
