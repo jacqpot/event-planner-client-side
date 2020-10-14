@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addSection } from "../actions/sectionsActions";
 
 class SectionForm extends Component {
   state = {
@@ -74,4 +76,4 @@ class SectionForm extends Component {
   }
 }
 
-export default SectionForm;
+export default connect(null, { addSection })(SectionForm);
