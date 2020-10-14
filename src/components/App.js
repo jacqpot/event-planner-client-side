@@ -10,7 +10,6 @@ const App = () => {
       <NavBar />
       <Router />
       <EventsContainer />
-      <SectionsContainer />
     </div>
   );
 };

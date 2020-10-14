@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import EventList from "./EventsList";
+import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 const Event = ({ even }) => {
   // debugger;
   return (
@@ -8,9 +10,10 @@ const Event = ({ even }) => {
       <li>
         <h2>
           {" "}
-          <button>{even.title}</button>
+          <NavLink to={`/events/${even.id}`}>{even.title}</NavLink>
         </h2>
         <h4>{even.description}</h4>
+        <p> {even.id} </p>
         <p>
           - {even.set_date || even.date} - {even.set_start || even.start} -{" "}
           {even.set_finish || even.finish}
@@ -20,4 +23,8 @@ const Event = ({ even }) => {
   );
 };
 
-export default Event;
+const mapStateToProps = (state) => {
+  return { events: state.id };
+};
+
+export default connect(mapStateToProps)(Event);

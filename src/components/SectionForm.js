@@ -1,15 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
 import { addSection } from "../actions/sectionsActions";
 
 class SectionForm extends Component {
-  state = {
-    title: "",
-    description: "",
-    startTime: "",
-    duration: "",
-    event_id: "",
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "",
+      description: "",
+      startTime: "",
+      duration: "",
+      event_id: props.evenId,
+    };
+  }
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +31,7 @@ class SectionForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>New Event Form</h3>
+        <h3>New section Form</h3>
 
         <br />
         <label>Title:</label>
@@ -62,14 +66,7 @@ class SectionForm extends Component {
           name="duration"
         />
         <br />
-        <label></label>
-        <input
-          type="hidden"
-          value={this.state.event_id}
-          onChange={this.handleChange}
-          name="event_id"
-        />
-        <br />
+
         <input type="submit" value="Create Section" />
       </form>
     );
