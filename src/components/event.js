@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import EventList from "./EventsList";
+import React from "react";
+
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 const Event = ({ even }) => {

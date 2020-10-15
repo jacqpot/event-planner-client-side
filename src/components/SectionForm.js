@@ -10,7 +10,7 @@ class SectionForm extends Component {
       title: "",
       description: "",
       startTime: "",
-      duration: "",
+      duration: 15,
       event_id: props.evenId,
     };
   }
@@ -21,11 +21,18 @@ class SectionForm extends Component {
     this.setState({
       [name]: value,
     });
+
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addSection(this.state);
+    this.setState({
+      title: "",
+      description: "",
+      startTime: "",
+      duration: 15
+    })
   };
 
   render() {
@@ -52,7 +59,7 @@ class SectionForm extends Component {
         <br />
         <label>Start Time:</label>
         <input
-          type="startTime"
+          type="time"
           value={this.state.startTime}
           onChange={this.handleChange}
           name="startTime"
@@ -60,8 +67,8 @@ class SectionForm extends Component {
         <br />
         <label>Duration:</label>
         <input
-          type="time"
-          value={this.state.duration}
+          type="text"
+          value={parseInt(this.state.duration)}
           onChange={this.handleChange}
           name="duration"
         />

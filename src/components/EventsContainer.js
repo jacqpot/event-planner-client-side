@@ -4,8 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { fetchEvents } from "../actions/eventsActions";
-import SectionForm from "./EventsForm";
-import SectionList from "./EventsList";
+
 
 export class EventsContainer extends Component {
   componentDidMount() {
@@ -13,7 +12,7 @@ export class EventsContainer extends Component {
   }
 
   render() {
-    return <div></div>;
+    return <div> </div>;
   }
 }
 
