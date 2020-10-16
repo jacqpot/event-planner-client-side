@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import Router from "./Router";
 import NavBar from "./Navbar";
 import { fetchEvents } from "../actions/eventsActions"
-import Home from "./Home";
-import { EventsContainer } from "./EventsContainer";
 import { connect } from "react-redux"
 export class App extends Component {
   componentDidMount() {
