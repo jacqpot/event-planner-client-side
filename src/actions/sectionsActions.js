@@ -8,7 +8,7 @@ export const fetchSections = () => {
   };
 };
 
-export const addSection = (section) => {
+export const addSection = (section, history) => {
   return (dispatch) => {
     fetch("http://localhost:3001/sections", {
       method: "POST",
@@ -19,6 +19,7 @@ export const addSection = (section) => {
       .then((section) =>{
          dispatch({ type: "ADD_SECTION", payload: section })
          dispatch({ type: "UPDATE_EVENT", payload: section})
+         history.push(`/events/${section.event_id}`)
          });
   };
 };

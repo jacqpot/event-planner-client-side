@@ -5,13 +5,7 @@ export const fetchEvents = () => {
       .then((events) => dispatch({ type: "FETCH_EVENTS", payload: events }));
   };
 };
-export const fetchEvent = (evenId) => {
-  return (dispatch) => {
-    fetch(`http://localhost:3001/events/${evenId}`)
-      .then((resp) => resp.json())
-      .then((even) => dispatch({ type: "FETCH_EVENT", payload: even }));
-  };
-};
+
 
 export const addEvent = (ev) => {
   return (dispatch) => {
@@ -24,3 +18,4 @@ export const addEvent = (ev) => {
       .then((ev) => dispatch({ type: "ADD_EVENT", payload: ev }));
   };
 };
+

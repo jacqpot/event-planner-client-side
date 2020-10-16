@@ -26,7 +26,7 @@ class SectionForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addSection(this.state);
+    this.props.addSection(this.state, this.props.history);
     this.setState({
       title: "",
       description: "",

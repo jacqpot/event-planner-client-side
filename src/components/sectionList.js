@@ -1,28 +1,30 @@
 import React from "react";
-import { connect } from "react-redux";
+import Section from "./Section"
 
-const SectionList = ({ sections }, even) => {
-  return (
-    <div>
+
+const SectionList = ({ event }) => {
+  if (event){
+
+    const sec = event.sections.map((section, i) => <Section key={i} section={section} />)
+    
+    return (
+      <div>
       <ul>
-        {sections.map((section) => (
-          <li key={section.id}>
-            {section.title} <br /> {section.start} <br /> {section.set_duration}
-          </li>
-        ))}
+        hi
+          {sec}         
       </ul>
     </div>
   );
+} 
 };
 
-const mapStateToProps = (state) => {
-  return { sections: state.sections };
-};
+// const mapStateToProps = (state, props) => {
+//   return {
+//     even: state.events.find((ev) => ev.id.toString() === props.event),
+//   };
+// };
 
-export default connect(mapStateToProps)(SectionList);
+export default SectionList;
 
 
-const sections = even.sections.map((section, i) => <Section key={i} section={section} />);
 
-
-<ul>{sections}</ul> 

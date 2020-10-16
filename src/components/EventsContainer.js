@@ -1,25 +1,19 @@
-// houses data and methods.
-
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react'
 import EventsList from "./EventsList"
-import { fetchEvents } from "../actions/eventsActions";
+import EventsForm from "./EventsForm"
 
 
 export class EventsContainer extends Component {
-  componentDidMount() {
-    this.props.fetchEvents();
-  }
 
-  render() {
-    return (
-      <div>
-        <EventsList />    
-      </div>
-      );
-  }
+
+    render() {
+        return (
+            <div>
+                <EventsList />
+                <EventsForm />
+            </div>
+        )
+    }
 }
 
-
-
-export default connect(null, { fetchEvents })(EventsContainer);
+export default EventsContainer

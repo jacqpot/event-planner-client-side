@@ -1,16 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Router from "./Router";
-import Home from "./Home";
 import NavBar from "./Navbar";
-const App = () => {
-  return (
-    <div>
+import { fetchEvents } from "../actions/eventsActions"
+import Home from "./Home";
+import { EventsContainer } from "./EventsContainer";
+import { connect } from "react-redux"
+export class App extends Component {
+  componentDidMount() {
+    // console.log(this)
+    this.props.fetchEvents()
+}
+  render(){
+
+    return (
+      <div>
       <NavBar />
       <Router />
-      <Home />
     </div>
   );
+}
 };
 
-export default App;
+export default connect(null, { fetchEvents })(App)

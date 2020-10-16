@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import SectionsContainer from './SectionsContainer'
+import SectionList from './sectionList'
+import SectionForm from './SectionForm'
 
-const EventShow = ({ even }) => {
+const EventShow = ({ even, history }) => {
   if (even) {
-    console.dir(even);
+    console.log(even);
     return (
       <div>
         <h2>{even.title}</h2>
@@ -15,7 +16,9 @@ const EventShow = ({ even }) => {
           {even.set_finish || even.finish}
         </p>
         <h4> Event Breakdown</h4>
-        <SectionsContainer even={even}/>
+        <SectionList event={even}/>
+        <SectionForm evenId={even.id} history={history}/>
+
       </div>
 
     );
