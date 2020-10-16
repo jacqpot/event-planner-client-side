@@ -16,6 +16,9 @@ export const addSection = (section) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((resp) => resp.json())
-      .then((section) => dispatch({ type: "ADD_SECTION", payload: section }));
+      .then((section) =>{
+         dispatch({ type: "ADD_SECTION", payload: section })
+         dispatch({ type: "UPDATE_EVENT", payload: section})
+         });
   };
 };

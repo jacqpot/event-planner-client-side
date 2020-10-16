@@ -6,7 +6,19 @@ export const eventsReducer = (state = [], action) => {
       return action.payload;
     case "ADD_EVENT":
       return [...state, action.payload];
-    default:
-      return state;
-  }
-};
+    case "UPDATE_EVENT":
+          let copy = state
+          let ev = copy.find(event => action.payload.event_id === event.id)
+          ev.sections.push(action.payload)
+          return [...state.filter(event => action.payload.event_id === event.id), ev]
+
+
+      default:
+        return state;
+      }
+    };
+    
+    
+    
+
+// ...state.find(event => action.payload.event_id === event.id)

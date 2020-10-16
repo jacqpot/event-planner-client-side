@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import EventsList from "./EventsList"
 import { fetchEvents } from "../actions/eventsActions";
 
 
@@ -12,8 +12,14 @@ export class EventsContainer extends Component {
   }
 
   render() {
-    return <div> </div>;
+    return (
+      <div>
+        <EventsList />    
+      </div>
+      );
   }
 }
+
+
 
 export default connect(null, { fetchEvents })(EventsContainer);

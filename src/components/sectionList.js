@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const SectionList = ({ sections }) => {
+const SectionList = ({ sections }, even) => {
   return (
     <div>
       <ul>
@@ -20,3 +20,9 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(SectionList);
+
+
+const sections = even.sections.map((section, i) => <Section key={i} section={section} />);
+
+
+<ul>{sections}</ul> 

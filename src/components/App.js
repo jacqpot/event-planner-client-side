@@ -1,14 +1,14 @@
 import React from "react";
 
 import Router from "./Router";
-import EventsContainer from "./EventsContainer";
+import Home from "./Home";
 import NavBar from "./Navbar";
 const App = () => {
   return (
     <div>
       <NavBar />
       <Router />
-      <EventsContainer />
+      <Home />
     </div>
   );
 };
