@@ -1,31 +1,24 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Button from '@material-ui/core/Button'
 
 export class Navbar extends Component {
   render() {
     return (
-      <Grid className="NavBar">
-            <NavLink to="/">
-              
+      <div className="NavBar">
+              <Button href="/" var="contained" color='primary'>
               Home
-
-              </NavLink>
-            <NavLink to="/events">
-
+              </Button>
+            <Button href="/events" var="contained" color='primary'>
               Events
-
-              </NavLink>
-            <NavLink to="/about">
-
+            </Button>
+            <Button href="/about" var="contained" color='primary'>
               About
-
-              </NavLink>
-            <NavLink to="/new">
-
+            </Button>
+            <Button href="/new" var="contained" color='primary'>
               New Event
-
-              </NavLink>
-      </Grid>
+            </Button>
+      </div>
     );
   }
 }
