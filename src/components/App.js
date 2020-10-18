@@ -4,6 +4,10 @@ import Router from "./Router";
 import NavBar from "./Navbar";
 import { fetchEvents } from "../actions/eventsActions"
 import { connect } from "react-redux"
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import "./App.css"
 export class App extends Component {
   componentDidMount() {
     // console.log(this)
@@ -12,7 +16,7 @@ export class App extends Component {
   render(){
 
     return (
-      <div>
+      <div className="body">   
       <NavBar />
       <Router />
     </div>

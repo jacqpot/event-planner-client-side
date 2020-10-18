@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { addEvent } from "../actions/eventsActions";
+import TextField from '@material-ui/core/TextField'
+
+
+
 class EventsForm extends Component {
   state = {
     title: "",
@@ -30,16 +34,17 @@ class EventsForm extends Component {
         <h3>New Event Form</h3>
 
         <br />
-        <label>Title:</label>
-        <input
+        
+        <TextField id="standard-basic" label="Event Title:" 
           type="text"
           value={this.state.title}
           onChange={this.handleChange}
           name="title"
         />
         <br />
-        <label>Description:</label>
-        <input
+        
+                <TextField id="standard-basic" label="Description:" 
+
           type="text"
           value={this.state.description}
           onChange={this.handleChange}
@@ -47,7 +52,8 @@ class EventsForm extends Component {
         />
         <br />
         <label>Date:</label>
-        <input
+                <TextField id="standard-basic"
+
           type="date"
           value={this.state.date}
           onChange={this.handleChange}
@@ -55,7 +61,8 @@ class EventsForm extends Component {
         />
         <br />
         <label>Start time:</label>
-        <input
+                <TextField id="standard-basic" 
+
           type="time"
           value={this.state.start}
           onChange={this.handleChange}
@@ -63,14 +70,16 @@ class EventsForm extends Component {
         />
         <br />
         <label>finish time:</label>
-        <input
+                <TextField id="standard-basic"
+
           type="time"
           value={this.state.finish}
           onChange={this.handleChange}
           name="finish"
         />
         <br />
-        <input type="submit" value="Create Event" />
+                <input 
+ type="submit" value="Create Event" />
       </form>
     );
   }

@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { fetchSections } from "../actions/sectionsActions";
 import SectionForm from "./SectionForm";
 import SectionList from "./sectionList";
+import Grid from '@material-ui/core/Grid';
+
 
 
 export class SectionsContainer extends Component {
