@@ -26,6 +26,13 @@ class EventsForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addEvent(this.state);
+    this.setState({
+      title: "",
+      description: "",
+      date: 0,
+      start: 0,
+      finish: 0,
+    });
   };
 
   render() {
@@ -105,7 +112,7 @@ class EventsForm extends Component {
             />
           </Grid>
           <br />
-          <input component="Button" type="submit" value="Create Event" />
+          <input type="submit" value="Create Event" />
         </form>
       </Grid>
     );

@@ -14,21 +14,56 @@ const EventShow = ({ even, history }) => {
           container
           spacing={1}
           direction="row"
-          justify="space-around"
+          justify="space-evenly"
           alignItems="center"
+          id="sections"
+          style={{
+            padding: 30,
+          }}
         >
-          <Grid>
-            <h2>{even.title}</h2>
-            <h4>{even.description}</h4>
-            <p>
-              - {even.set_date || even.date} - {even.set_start || even.start} -{" "}
-              {even.set_finish || even.finish}
-            </p>
-            <h4> Event Breakdown</h4>
-            <SectionList event={even} />
+          <Grid
+            style={{
+              backgroundColor: "de6e4b",
+              opacity: 50,
+              padding: 30,
+              borderRadius: 9,
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "f0f3f5",
+                paddingTop: 30,
+                paddingRight: 30,
+                paddingBottom: 50,
+                paddingLeft: 20,
+              }}
+            >
+              <h2>{even.title}</h2>
+              <h4>{even.description}</h4>
+              <p>
+                - {even.set_date || even.date} - {even.set_start || even.start}{" "}
+                - {even.set_finish || even.finish}
+              </p>
+              <h4> Event Breakdown</h4>
+              <SectionList event={even} />
+            </div>
           </Grid>
-          <Grid>
-            <SectionForm evenId={even.id} history={history} />
+          <Grid
+            style={{
+              backgroundColor: "de6e4b",
+              padding: 25,
+              borderRadius: 9,
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "f0f3f5",
+                padding: 25,
+                borderRadius: 9,
+              }}
+            >
+              <SectionForm evenId={even.id} history={history} />
+            </div>
           </Grid>
         </Grid>
       </div>
