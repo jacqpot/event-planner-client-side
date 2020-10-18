@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { addSection } from "../actions/sectionsActions";
+import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
+import { Typography } from "@material-ui/core";
 
 class SectionForm extends Component {
   constructor(props) {
@@ -21,7 +24,6 @@ class SectionForm extends Component {
     this.setState({
       [name]: value,
     });
-
   };
 
   handleSubmit = (e) => {
@@ -31,51 +33,78 @@ class SectionForm extends Component {
       title: "",
       description: "",
       startTime: "",
-      duration: 15
-    })
+      duration: 15,
+    });
   };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h3>New section Form</h3>
+      <Grid
+        container
+        direction="column"
+        justify="space-around"
+        alignItems="stretch"
+        spacing={2}
+      >
+        <form onSubmit={this.handleSubmit}>
+          <h3>New section Form</h3>
 
-        <br />
-        <label>Title:</label>
-        <input
-          type="text"
-          value={this.state.title}
-          onChange={this.handleChange}
-          name="title"
-        />
-        <br />
-        <label>Description:</label>
-        <input
-          type="text"
-          value={this.state.description}
-          onChange={this.handleChange}
-          name="description"
-        />
-        <br />
-        <label>Start Time:</label>
-        <input
-          type="time"
-          value={this.state.startTime}
-          onChange={this.handleChange}
-          name="startTime"
-        />
-        <br />
-        <label>Duration:</label>
-        <input
-          type="text"
-          value={parseInt(this.state.duration)}
-          onChange={this.handleChange}
-          name="duration"
-        />
-        <br />
+          <br />
+          <Grid>
+            <TextField
+              type="text"
+              id="standard-basic"
+              label="Title:"
+              variant="outlined"
+              value={this.state.title}
+              onChange={this.handleChange}
+              name="title"
+            />
+          </Grid>
+          <br />
+          <Grid>
+            <TextField
+              type="text"
+              id="standard-basic"
+              label="Description:"
+              variant="outlined"
+              value={this.state.description}
+              onChange={this.handleChange}
+              name="description"
+            />
+          </Grid>
+          <br />
+          <Grid>
+            <Typography id="Start-time">Start time</Typography>
 
-        <input type="submit" value="Create Section" />
-      </form>
+            <TextField
+              aria-labelledby="Start-time"
+              id="standard-basic"
+              variant="outlined"
+              type="time"
+              value={this.state.startTime}
+              onChange={this.handleChange}
+              name="startTime"
+            />
+          </Grid>
+          <br />
+          <Grid>
+            <Typography id="Duration">Duration</Typography>
+            <TextField
+              aria-labelledby="Duration"
+              id="standard-basic"
+              variant="outlined"
+              type="text"
+              value={parseInt(this.state.duration)}
+              onChange={this.handleChange}
+              name="duration"
+            />
+          </Grid>
+          <br />
+
+          <input type="submit" value="Create Section" />
+        </form>
+      </Grid>
     );
   }
 }

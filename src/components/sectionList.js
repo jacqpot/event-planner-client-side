@@ -4,9 +4,10 @@ import Grid from "@material-ui/core/Grid";
 
 const SectionList = ({ event }) => {
   if (event) {
-    const sec = event.sections.map((section, i) => (
-      <Section key={i} section={section} />
-    ));
+    let sort = event.sections.sort(function (a, b) {
+      return new Date(a.startTime) - new Date(b.startTime);
+    });
+    const sec = sort.map((section, i) => <Section key={i} section={section} />);
 
     return (
       <div>

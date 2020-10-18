@@ -8,3 +8,16 @@ body {
 #events {
   background-color: bisque important!;
 }
+.title {
+  color: f0f3f5;
+}
+.footer {
+  background-color: 351e29;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  color: white;
+  text-align: center;
+}
