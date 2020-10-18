@@ -1,21 +1,19 @@
 import React from "react";
-import Section from "./Section"
-
+import Section from "./Section";
+import Grid from "@material-ui/core/Grid";
 
 const SectionList = ({ event }) => {
-  if (event){
+  if (event) {
+    const sec = event.sections.map((section, i) => (
+      <Section key={i} section={section} />
+    ));
 
-    const sec = event.sections.map((section, i) => <Section key={i} section={section} />)
-    
     return (
       <div>
-      <ul>
-        hi
-          {sec}         
-      </ul>
-    </div>
-  );
-} 
+        <Grid>{sec}</Grid>
+      </div>
+    );
+  }
 };
 
 // const mapStateToProps = (state, props) => {
@@ -25,6 +23,3 @@ const SectionList = ({ event }) => {
 // };
 
 export default SectionList;
-
-
-

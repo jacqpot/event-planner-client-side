@@ -6,18 +6,14 @@ const Event = ({ even }) => {
   // debugger;
   return (
     <div>
-      {console.log(even)}
       <li>
         <h2>
           {" "}
           <NavLink to={`/events/${even.id}`}>{even.title}</NavLink>
         </h2>
         <h4>{even.description}</h4>
-        <p> {even.id} </p>
-        <p>
-          - {even.set_date || even.date} - {even.set_start || even.start} -{" "}
-          {even.set_finish || even.finish}
-        </p>
+
+        <p>- {even.set_date || even.date}</p>
       </li>
     </div>
   );
