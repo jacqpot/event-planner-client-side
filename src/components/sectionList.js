@@ -3,7 +3,7 @@ import Section from "./Section";
 import Grid from "@material-ui/core/Grid";
 
 const SectionList = ({ event }) => {
-  if (event) {
+  if (event.sections) {
     let sort = event.sections.sort(function (a, b) {
       return new Date(a.startTime) - new Date(b.startTime);
     });

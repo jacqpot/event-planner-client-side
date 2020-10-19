@@ -1,3 +1,5 @@
+import EventsList from "../components/EventsList";
+
 export const fetchEvents = () => {
   return (dispatch) => {
     fetch("http://localhost:3001/events")
@@ -5,7 +7,6 @@ export const fetchEvents = () => {
       .then((events) => dispatch({ type: "FETCH_EVENTS", payload: events }));
   };
 };
-
 
 export const addEvent = (ev) => {
   return (dispatch) => {
@@ -15,7 +16,8 @@ export const addEvent = (ev) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((resp) => resp.json())
-      .then((ev) => dispatch({ type: "ADD_EVENT", payload: ev }));
+      .then((ev) => {
+        dispatch({ type: "ADD_EVENT", payload: ev });
+      });
   };
 };
-

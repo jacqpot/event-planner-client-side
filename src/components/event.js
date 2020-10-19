@@ -4,6 +4,15 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 const Event = ({ even }) => {
   // debugger;
+  let options = {
+    timeZone: "cst",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  };
+  let date = new Date(even.date);
+  let formatedDate = new Intl.DateTimeFormat("en-us", options).format(date);
+  console.log(even.date, formatedDate);
   return (
     <div>
       <li>
@@ -13,7 +22,7 @@ const Event = ({ even }) => {
         </h2>
         <h4>{even.description}</h4>
 
-        <p>- {even.set_date || even.date}</p>
+        <p>- {formatedDate}</p>
       </li>
     </div>
   );

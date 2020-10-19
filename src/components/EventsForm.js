@@ -86,7 +86,7 @@ class EventsForm extends Component {
             />
           </Grid>
           <br />
-          <Grid justify="flex-end">
+          <Grid>
             <Typography id="startTime">Start</Typography>
             <TextField
               aria-labelledby="startTime"
