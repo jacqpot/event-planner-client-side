@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import "../style/App.css";
@@ -22,9 +21,6 @@ export class Navbar extends Component {
           </Button>
           <Button href="/events" variant="contained" color="primary">
             Events
-          </Button>
-          <Button href="/about" variant="contained" color="primary">
-            About
           </Button>
         </Grid>
       </div>

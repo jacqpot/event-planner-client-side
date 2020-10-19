@@ -24,7 +24,7 @@ export class App extends Component {
         <div className="body">
           <NavBar />
           <Router />
-          <footer className="footer">say my name</footer>
+          <footer className="footer">EVENT PLANNER 2020</footer>
         </div>
       </MuiThemeProvider>
     );
