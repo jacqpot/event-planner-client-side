@@ -14,6 +14,8 @@ const SectionList = ({ event }) => {
         <Grid>{sec}</Grid>
       </div>
     );
+  } else {
+    return null;
   }
 };
 

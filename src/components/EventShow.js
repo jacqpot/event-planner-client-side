@@ -7,7 +7,29 @@ import Grid from "@material-ui/core/Grid";
 
 const EventShow = ({ even, history }) => {
   if (even) {
-    console.log(even);
+    let options = {
+      timeZone: "MST",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    };
+    let timeOptions = {
+      timeZone: "GMT",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    };
+    let date = new Date(even.date);
+    let formatedDate = new Intl.DateTimeFormat("en-us", options).format(date);
+    let start = new Date(even.start);
+    let formatedStart = new Intl.DateTimeFormat("en-US", timeOptions).format(
+      start
+    );
+    let finish = new Date(even.finish);
+    let formatedFinish = new Intl.DateTimeFormat("en-US", timeOptions).format(
+      finish
+    );
+    console.log(formatedStart);
     return (
       <div>
         <Grid
@@ -41,10 +63,9 @@ const EventShow = ({ even, history }) => {
               <h2>{even.title}</h2>
               <h4>{even.description}</h4>
               <p>
-                - {even.set_date || even.date} - {even.set_start || even.start}{" "}
-                - {even.set_finish || even.finish}
+                - {formatedDate} -from- {formatedStart} - {formatedFinish}
               </p>
-              <h4> Event Breakdown</h4>
+              <h4> Event Schedule</h4>
               <SectionList event={even} />
             </div>
           </Grid>
