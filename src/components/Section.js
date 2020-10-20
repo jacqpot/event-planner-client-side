@@ -11,7 +11,14 @@ const Section = ({ section }) => {
   };
   let date = new Date(section.startTime);
   let formatedDate = new Intl.DateTimeFormat("en-US", options).format(date);
-  console.log(date);
+  console.log(
+    "section.startTime =",
+    section.startTime,
+    "date =",
+    date,
+    "formatedDate =",
+    formatedDate
+  );
   return (
     <Grid>
       <h4>

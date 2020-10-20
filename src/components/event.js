@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Event = ({ even }) => {
   // debugger;
   let options = {
-    timeZone: "cst",
+    timeZone: "GMT",
     year: "numeric",
     month: "numeric",
     day: "numeric",

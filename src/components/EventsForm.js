@@ -13,6 +13,7 @@ class EventsForm extends Component {
     date: 0,
     start: 0,
     finish: 0,
+    sections: [],
   };
 
   handleChange = (e) => {
@@ -32,6 +33,7 @@ class EventsForm extends Component {
       date: 0,
       start: 0,
       finish: 0,
+      sections: [],
     });
   };
 

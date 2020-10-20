@@ -5,18 +5,16 @@ export const eventsReducer = (state = [], action) => {
     case "ADD_EVENT":
       return [...state, action.payload];
     case "UPDATE_EVENT":
-          let copy = [...state]
-          let ev = copy.find(event => action.payload.event_id === event.id)
-          ev.sections.push(action.payload)
-          // debugger;
-          return [...copy]
-      default:
-        return state;
+      let copy = [...state];
+      let ev = copy.find((event) => action.payload.event_id === event.id);
+      if (ev.sections) {
+        ev.sections.push(action.payload);
       }
-    };
-    
-    
-    
+      // debugger;
+      return [...copy];
+    default:
+      return state;
+  }
+};
 
-    
 // ...state.find(event => action.payload.event_id === event.id)

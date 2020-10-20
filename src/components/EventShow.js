@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 const EventShow = ({ even, history }) => {
   if (even) {
     let options = {
-      timeZone: "MST",
+      timeZone: "GMT",
       year: "numeric",
       month: "numeric",
       day: "numeric",
@@ -29,7 +29,7 @@ const EventShow = ({ even, history }) => {
     let formatedFinish = new Intl.DateTimeFormat("en-US", timeOptions).format(
       finish
     );
-    console.log(formatedStart);
+    console.log(even.date);
     return (
       <div>
         <Grid
