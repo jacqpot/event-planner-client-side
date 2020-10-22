@@ -1,5 +1,3 @@
-import EventsList from "../components/EventsList";
-
 export const fetchEvents = () => {
   return (dispatch) => {
     fetch("http://localhost:3001/events")

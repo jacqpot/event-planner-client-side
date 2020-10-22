@@ -6,6 +6,7 @@ import "../style/App.css";
 
 export class EventsContainer extends Component {
   render() {
+    console.log(this);
     return (
       <Grid
         container

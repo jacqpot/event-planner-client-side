@@ -41,6 +41,9 @@ const Home = () => {
           </p>
           <ul>
             <li>
+              <p>include search functionality</p>
+            </li>
+            <li>
               <p>add validations to input </p>
             </li>
             <li>
