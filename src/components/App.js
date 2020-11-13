@@ -6,6 +6,7 @@ import { fetchEvents } from "../actions/eventsActions";
 import { connect } from "react-redux";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
+import "../style/Navbar.css";
 import "../style/App.css";
 export class App extends Component {
   componentDidMount() {
@@ -15,20 +16,14 @@ export class App extends Component {
     console.log("b");
   }
   render() {
-    const theme = createMuiTheme({
-      palette: {
-        primary: { main: "#f0f8ea" },
-        secondary: { main: "#351e29" },
-      },
-    });
     return (
-      <MuiThemeProvider theme={theme}>
-        <div className="body">
+      <div className="body">
+        <div className="navbar">
           <NavBar />
-          <Router />
-          <footer className="footer">EVENT PLANNER 2020</footer>
         </div>
-      </MuiThemeProvider>
+        <Router />
+        <footer className="footer">EVENT PLANNER 2020</footer>
+      </div>
     );
   }
 }

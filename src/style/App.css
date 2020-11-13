@@ -24,3 +24,6 @@ body {
 .home {
   text-align: center;
 }
+.body {
+  display: flex;
+}

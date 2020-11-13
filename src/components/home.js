@@ -4,30 +4,9 @@ import Grid from "@material-ui/core/Grid";
 
 const Home = () => {
   return (
-    <Grid
-      container
-      spacing={1}
-      direction="row"
-      justify="space-evenly"
-      alignItems="center"
-      id="sections"
-      style={{
-        padding: 30,
-      }}
-    >
-      <Grid
-        style={{
-          backgroundColor: "de6e4b",
-          opacity: 50,
-          padding: 30,
-          borderRadius: 9,
-        }}
-      >
-        <Container
-          fixed
-          maxWidth="sm"
-          style={{ backgroundColor: "#cfe8fc", height: "40vh" }}
-        >
+    <Grid>
+      <Grid>
+        <Container>
           <h1 className="home">Event Planning</h1>
           <p>
             This App was developed too help lay-peoples plan church events. With

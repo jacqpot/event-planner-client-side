@@ -53,13 +53,7 @@ class EventsForm extends Component {
   render() {
     let isEnabled = this.canBeSubmitted();
     return (
-      <Grid
-        container
-        direction="column"
-        justify="space-around"
-        alignItems="stretch"
-        spacing={2}
-      >
+      <Grid>
         <form onSubmit={this.handleSubmit}>
           <h3>New Event Form</h3>
 
