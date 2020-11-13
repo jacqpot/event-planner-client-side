@@ -1,19 +1,19 @@
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
   height: 100vh;
 }
 
-.form__container {
-  display: flex;
-  flex-direction: column;
-  flex: 0.25;
-  height: 100vh;
-  /* background-color: bisque; */
+.events__List {
+  grid: 1;
+  overflow: scroll;
+  background-color: #eee;
 }
 
-.form__div {
-  /* background-color: f0f3f5; */
-  padding: 25;
-  border-radius: 9;
+.events__List::-webkit-scrollbar {
+  display: none;
+}
+.events__List {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

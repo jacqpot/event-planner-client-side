@@ -23,6 +23,9 @@ body {
 /* .home {
   text-align: center;
 }
+*/
 .body {
-  display: flex;
-}  */
+  margin: 0px;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+}

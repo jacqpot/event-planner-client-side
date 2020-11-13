@@ -15,8 +15,8 @@ export class EventsContainer extends Component {
             <EventsForm />
           </div>
         </Grid>
-        <Grid>
-          <div>
+        <Grid className="events__container">
+          <div className="events__List">
             <EventsList />
           </div>
         </Grid>
