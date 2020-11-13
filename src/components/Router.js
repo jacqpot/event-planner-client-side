@@ -9,11 +9,11 @@ import { EventsContainer } from "./EventsContainer";
 const Router = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/events/:id" component={EventShow} />
+      <Route path="/new" component={EventsForm} />
       <Route exact path="/events" component={EventsContainer} />
 
-      <Route path="/new" component={EventsForm} />
-      <Route exact path="/events/:id" component={EventShow} />
+      <Route exact path="/" component={Home} />
     </Switch>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import Liker from "./Liker";
 const Event = ({ even }) => {
   // debugger;
   let options = {
@@ -12,7 +13,7 @@ const Event = ({ even }) => {
   };
   let date = new Date(even.date);
   let formatedDate = new Intl.DateTimeFormat("en-us", options).format(date);
-  console.log(even.date, formatedDate);
+
   return (
     <div>
       <li>
@@ -20,6 +21,7 @@ const Event = ({ even }) => {
           {" "}
           <NavLink to={`/events/${even.id}`}>{even.title}</NavLink>
         </h2>
+        <Liker />
         <h4>{even.description}</h4>
 
         <p>- {formatedDate}</p>

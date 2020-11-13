@@ -23,9 +23,22 @@ class EventsForm extends Component {
       [name]: value,
     });
   };
+  canBeSubmitted() {
+    const { title, description, date, start, finish } = this.state;
+    return (
+      title.length > 0,
+      description.length > 0,
+      date.length > 0,
+      start.length > 0,
+      finish.length > 0
+    );
+  }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    if (!this.canBeSubmitted()) {
+      e.preventDefault();
+      return;
+    }
     this.props.addEvent(this.state);
     this.setState({
       title: "",
@@ -38,6 +51,7 @@ class EventsForm extends Component {
   };
 
   render() {
+    let isEnabled = this.canBeSubmitted();
     return (
       <Grid
         container
@@ -114,7 +128,7 @@ class EventsForm extends Component {
             />
           </Grid>
           <br />
-          <input type="submit" value="Create Event" />
+          <input disabled={!isEnabled} type="submit" value="Create Event" />
         </form>
       </Grid>
     );
