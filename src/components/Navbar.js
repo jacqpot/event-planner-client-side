@@ -6,15 +6,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div className="NavBar">
-        <Grid
-          style={{
-            backgroundColor: "351e29",
-          }}
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-        >
+        <Grid>
           <h1 className="title">Event Planner</h1>
           <Button href="/" variant="contained" color="primary">
             Home

@@ -1,4 +1,9 @@
 .navbar {
-  flex-direction: row;
-  flex: 1;
+  direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
+
+/* direction="row"
+justify="space-around"
+alignItems="center" */

@@ -3,29 +3,17 @@
   flex-direction: row;
   height: 100vh;
 }
-/* spacing={1}
-direction="row"
-justify="space-evenly"
-alignItems="center"
-id="events"
-style={{
-  padding: 30,
-}} */
+
 .form__container {
   display: flex;
   flex-direction: column;
   flex: 0.25;
   height: 100vh;
-  background-color: bisque;
+  /* background-color: bisque; */
 }
-/* 
-style={{
-    backgroundColor: "de6e4b",
-    padding: 25,
-    borderRadius: 9,
-  }} */
+
 .form__div {
-  background-color: f0f3f5;
+  /* background-color: f0f3f5; */
   padding: 25;
   border-radius: 9;
 }

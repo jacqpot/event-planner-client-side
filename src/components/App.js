@@ -4,7 +4,6 @@ import Router from "./Router";
 import NavBar from "./Navbar";
 import { fetchEvents } from "../actions/eventsActions";
 import { connect } from "react-redux";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
 import "../style/Navbar.css";
 import "../style/App.css";
