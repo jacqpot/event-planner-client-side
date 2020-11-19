@@ -10,9 +10,7 @@ import "../style/App.css";
 export class App extends Component {
   componentDidMount() {
     // console.log(this)
-    console.log("a");
     this.props.fetchEvents();
-    console.log("b");
   }
   render() {
     return (
