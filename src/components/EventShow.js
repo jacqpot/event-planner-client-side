@@ -46,7 +46,7 @@ const EventShow = ({ even, history }) => {
           </Grid>
           <Grid>
             <div>
-              <SectionForm evenId={even.id} history={history} />
+              <SectionForm even={even} history={history} />
             </div>
           </Grid>
         </Grid>

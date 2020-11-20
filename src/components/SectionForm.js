@@ -15,7 +15,7 @@ class SectionForm extends Component {
       description: "",
       startTime: "",
       duration: 15,
-      event_id: props.evenId,
+      event_id: props.even.Id,
     };
   }
   duration = [15, 30, 45, 60];
@@ -25,8 +25,9 @@ class SectionForm extends Component {
     },
   };
   handleTimeChange = (e) => {
+    console.log(e._d);
     this.setState({
-      startTime: e.target,
+      startTime: e._d,
     });
   };
   handleChange = (e) => {
@@ -95,6 +96,7 @@ class SectionForm extends Component {
               dateFormat={false}
               closeOnClickOutside={true}
               timeConstraints={this.timeConstraints}
+              initialViewDate={new Date(this.props.even.date)}
               value={this.state.startTime}
               onChange={this.handleTimeChange}
               name="startTime"
