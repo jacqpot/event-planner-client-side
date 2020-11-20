@@ -5,7 +5,8 @@ import { addSection } from "../actions/sectionsActions";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";
-
+import Datetime from "react-datetime";
+import "react-datetime/css/react-datetime.css";
 class SectionForm extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,16 @@ class SectionForm extends Component {
     };
   }
 
+  timeConstraints = {
+    minutes: {
+      step: 5,
+    },
+  };
+  handleTimeChange = (e) => {
+    this.setState({
+      startTime: e.target.value,
+    });
+  };
   handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -77,13 +88,15 @@ class SectionForm extends Component {
           <Grid>
             <Typography id="Start-time">Start time</Typography>
 
-            <TextField
+            <Datetime
               aria-labelledby="Start-time"
               id="standard-basic"
               variant="outlined"
-              type="time"
+              dateFormat={false}
+              closeOnClickOutside={true}
+              timeConstraints={this.timeConstraints}
               value={this.state.startTime}
-              onChange={this.handleChange}
+              onChange={this.handleTimeChange}
               name="startTime"
             />
           </Grid>
