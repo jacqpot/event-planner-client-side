@@ -26,7 +26,7 @@ class SectionForm extends Component {
   };
   handleTimeChange = (e) => {
     this.setState({
-      startTime: e.target.value,
+      startTime: e.target,
     });
   };
   handleChange = (e) => {
