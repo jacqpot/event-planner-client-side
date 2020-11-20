@@ -18,10 +18,10 @@ class SectionForm extends Component {
       event_id: props.evenId,
     };
   }
-
+  duration = [15, 30, 45, 60];
   timeConstraints = {
     minutes: {
-      step: 5,
+      step: 15,
     },
   };
   handleTimeChange = (e) => {
@@ -102,16 +102,21 @@ class SectionForm extends Component {
           </Grid>
           <br />
           <Grid>
-            <Typography id="Duration">Duration</Typography>
-            <TextField
+            <Typography id="Duration">How long will this take</Typography>
+            <select
               aria-labelledby="Duration"
               id="standard-basic"
               variant="outlined"
               type="text"
-              value={parseInt(this.state.duration)}
+              value={this.state.duration}
               onChange={this.handleChange}
               name="duration"
-            />
+            >
+              <option value={15}>15m</option>
+              <option value={30}>30m</option>
+              <option value={45}>45m</option>
+              <option value={60}>60m</option>
+            </select>
           </Grid>
           <br />
 
