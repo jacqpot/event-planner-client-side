@@ -11,12 +11,25 @@ body {
 .title {
   color: f0f3f5;
 } */
+.content {
+  position: absolute;
+  top: 200px;
+  bottom: 200px;
+  left: 50px;
+  right: 50px;
+  overflow: auto;
+}
 .footer {
-  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  height: 75px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
   background: #33ff66;
-  border-radius: 10px;
+
   border: 1px solid #1feb52;
-  margin: 5px;
+
   color: white;
   text-align: center;
 }
@@ -28,4 +41,14 @@ body {
   margin: 0px;
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+.NavBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 200px;
+  right: 0px;
+  overflow: hidden;
 }

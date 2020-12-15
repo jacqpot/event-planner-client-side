@@ -18,7 +18,9 @@ export class App extends Component {
         <div className="navbar">
           <NavBar />
         </div>
-        <Router />
+        <div className="content">
+          <Router />
+        </div>
         <footer className="footer">EVENT PLANNER 2020</footer>
       </div>
     );

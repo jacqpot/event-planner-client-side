@@ -1,20 +1,11 @@
-.container {
+.eventWrapper {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  height: 100vh;
+  grid-template-columns: 2fr 2fr;
 }
-
-.events__List {
-  grid: 1;
-  overflow: scroll;
-  background-color: #eee;
-  height: 600px;
+.eventShowWrapper {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
 }
-
-.events__List::-webkit-scrollbar {
-  display: none;
-}
-.events__List {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.eventShow {
+  justify-content: center;
 }

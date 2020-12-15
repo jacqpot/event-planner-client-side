@@ -1,26 +1,21 @@
 import React, { Component } from "react";
 import EventsList from "./EventsList";
 import EventsForm from "./EventsForm";
-import Grid from "@material-ui/core/Grid";
 import "../style/App.css";
 import "../style/EventsContainer.css";
 
 export class EventsContainer extends Component {
   render() {
-    // console.log(this);
     return (
-      <Grid className="container">
-        <Grid className="form__container">
-          <div className="form__div">
-            <EventsForm />
-          </div>
-        </Grid>
-        <Grid className="events__container">
-          <div className="events__List">
-            <EventsList />
-          </div>
-        </Grid>
-      </Grid>
+      <div className="eventWrapper">
+        <div>
+          <EventsForm />
+        </div>
+
+        <div>
+          <EventsList />
+        </div>
+      </div>
     );
   }
 }

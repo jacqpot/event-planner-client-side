@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 
 import SectionList from "./sectionList";
 import SectionForm from "./SectionForm";
-import Grid from "@material-ui/core/Grid";
-
+import "../style/EventsContainer.css";
 const EventShow = ({ even, history }) => {
   if (even) {
     let options = {
@@ -31,25 +30,20 @@ const EventShow = ({ even, history }) => {
     );
     console.log(even.date);
     return (
-      <div>
-        <Grid>
-          <Grid>
-            <div>
-              <h2>{even.title}</h2>
-              <h4>{even.description}</h4>
-              <p>
-                - {formatedDate} -from- {formatedStart} - {formatedFinish}
-              </p>
-              <h4> Event Schedule</h4>
-              <SectionList event={even} />
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <SectionForm even={even} history={history} />
-            </div>
-          </Grid>
-        </Grid>
+      <div className="eventShowWrapper">
+        <div className="eventShow">
+          <h2>{even.title}</h2>
+          <h4>{even.description}</h4>
+          <p>
+            - {formatedDate} -from- {formatedStart} - {formatedFinish}
+          </p>
+          <h4> Event Schedule</h4>
+          <SectionList event={even} />
+        </div>
+
+        <div>
+          <SectionForm even={even} history={history} />
+        </div>
       </div>
     );
   } else {
