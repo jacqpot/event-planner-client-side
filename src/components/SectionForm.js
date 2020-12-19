@@ -7,6 +7,7 @@ import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
+import moment from "moment";
 class SectionForm extends Component {
   constructor(props) {
     super(props);
@@ -20,10 +21,15 @@ class SectionForm extends Component {
   }
   duration = [15, 30, 45, 60];
   timeConstraints = {
+    hours: {
+      min: this.props.even.start,
+      max: this.props.even.finish - 1,
+    },
     minutes: {
       step: 15,
     },
   };
+
   handleTimeChange = (e) => {
     console.log(e._d);
     this.setState({
