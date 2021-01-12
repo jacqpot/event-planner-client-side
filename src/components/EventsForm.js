@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Grid from "@material-ui/core/Grid";
-import "../style/App.css";
+import "../sass/main.scss";
 import { addEvent } from "../actions/eventsActions";
 import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";

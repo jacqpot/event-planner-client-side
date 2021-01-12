@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import SectionList from "./sectionList";
 import SectionForm from "./SectionForm";
-import "../style/EventsContainer.css";
+
 const EventShow = ({ even, history }) => {
   if (even) {
     let options = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
-import "../style/App.css";
+import "../sass/main.scss";
 export class Navbar extends Component {
   render() {
     return (

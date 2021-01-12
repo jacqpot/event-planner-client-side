@@ -7,7 +7,7 @@ import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
-import moment from "moment";
+
 class SectionForm extends Component {
   constructor(props) {
     super(props);

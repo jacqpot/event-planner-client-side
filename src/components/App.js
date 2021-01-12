@@ -5,8 +5,7 @@ import NavBar from "./Navbar";
 import { fetchEvents } from "../actions/eventsActions";
 import { connect } from "react-redux";
 
-import "../style/Navbar.css";
-import "../style/App.css";
+import "../sass/main.scss";
 export class App extends Component {
   componentDidMount() {
     // console.log(this)
@@ -18,9 +17,21 @@ export class App extends Component {
         <div className="navbar">
           <NavBar />
         </div>
-        <div className="content">
+        <header className="header">
+          <div className="header__logo-box">
+            <h1 className="heading-primary">
+              <span className="heading-primary--main">
+                Volenteer event planning
+              </span>
+              <span className="heading-primary--sub">
+                simple planning solutions
+              </span>
+            </h1>
+          </div>
+        </header>
+        <main>
           <Router />
-        </div>
+        </main>
         <footer className="footer">EVENT PLANNER 2020</footer>
       </div>
     );

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import EventsList from "./EventsList";
 import EventsForm from "./EventsForm";
-import "../style/App.css";
-import "../style/EventsContainer.css";
+import "../sass/main.scss";
 
 export class EventsContainer extends Component {
   render() {
