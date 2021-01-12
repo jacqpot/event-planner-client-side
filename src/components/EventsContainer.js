@@ -10,7 +10,6 @@ export class EventsContainer extends Component {
         <div>
           <EventsForm />
         </div>
-
         <div>
           <EventsList />
         </div>

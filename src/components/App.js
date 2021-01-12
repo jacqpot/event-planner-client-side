@@ -18,10 +18,11 @@ export class App extends Component {
           <NavBar />
         </div>
         <header className="header">
-          <div className="header__logo-box">
+          <div className="header__logo-box"></div>
+          <div className="header__text-box">
             <h1 className="heading-primary">
               <span className="heading-primary--main">
-                Volenteer event planning
+                Volunteer event planning
               </span>
               <span className="heading-primary--sub">
                 simple planning solutions

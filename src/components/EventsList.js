@@ -8,10 +8,9 @@ const EventsList = ({ events }) => {
     .reverse();
   const even = sortedEvents.map((ev, i) => <Event key={i} even={ev} />);
   return (
-    <div>
-      <h3>Events</h3>
-      <ul>{even}</ul>
-    </div>
+    <section class="event-section">
+      <div className="row">{even}</div>
+    </section>
   );
 };
 

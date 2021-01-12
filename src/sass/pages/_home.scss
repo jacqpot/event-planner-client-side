@@ -4,7 +4,7 @@
   margin-top: -20vh;
 }
 
-.section-features {
+.event-section {
   padding: 20rem;
   background-image: linear-gradient(
       to right bottom,
@@ -15,7 +15,7 @@
   background-size: cover;
 
   transform: skewY(-7deg);
-  margin-top: -11rem;
+  margin-top: 11rem;
   & > * {
     transform: skewY(7deg);
   }

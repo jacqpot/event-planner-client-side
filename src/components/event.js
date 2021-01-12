@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../sass/main.scss";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 const Event = ({ even }) => {
@@ -14,16 +14,14 @@ const Event = ({ even }) => {
   let formatedDate = new Intl.DateTimeFormat("en-us", options).format(date);
 
   return (
-    <div>
-      <li>
-        <h2>
-          {" "}
+    <div class="col-1-of-4">
+      <div className="feature-box">
+        <h3 className="heading-tertiary u-margin-bottom-small">
           <NavLink to={`/events/${even.id}`}>{even.title}</NavLink>
-        </h2>
-        <h4>{even.description}</h4>
-
-        <p>- {formatedDate}</p>
-      </li>
+        </h3>
+        <p className="feature-box__text">{formatedDate}</p>
+        <p className="feature-box__text">{even.description}</p>
+      </div>
     </div>
   );
 };
